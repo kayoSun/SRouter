@@ -1,0 +1,1 @@
+include ':app', ':srouter:lib_srouter_processor', ':srouter:lib_srouter_annos', ':srouter:lib_srouter_api'
