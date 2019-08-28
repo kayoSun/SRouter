@@ -18,8 +18,6 @@ public class TestApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        List<String> paths = new ArrayList<>();
-        paths.add("com.kayo.zrouter");
-        Router.init(this,paths);
+        Router.init(this);
     }
 }

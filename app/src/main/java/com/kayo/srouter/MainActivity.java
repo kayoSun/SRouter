@@ -10,7 +10,6 @@ import com.kayo.srouter.annos.RouterConfig;
 import com.kayo.srouter.annos.RouterRule;
 import com.kayo.srouter.api.Router;
 
-@RouterConfig()
 @RouterRule({"/maintactivity"})
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.v_text).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Router.getRouter().go("/main2activity",MainActivity.this);
+                Router.with(MainActivity.this).go("/main2activity");
             }
         });
     }

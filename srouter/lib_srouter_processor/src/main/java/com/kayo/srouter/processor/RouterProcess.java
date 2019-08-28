@@ -136,6 +136,7 @@ public class RouterProcess extends BaseProcess {
             //生成java文件
             try {
                 for (String appPath : appPacks) {
+                    utils.getMessager().printMessage(Diagnostic.Kind.WARNING,"创建java文件 "+appPath+" "+typeSpec.name);
                     JavaFile build = JavaFile.builder(appPath, typeSpec).build();
                     build.writeTo(utils.getFiler());
                 }
